@@ -56,7 +56,7 @@ const config: Config = {
           label: "Guides",
         },
         {
-          href: "https://github.com/facebook/docusaurus",
+          href: "https://github.com/Bear-Frost/bordex",
           label: "GitHub",
           position: "right",
         },
