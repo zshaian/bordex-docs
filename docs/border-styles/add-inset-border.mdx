@@ -1,0 +1,49 @@
+---
+title: "addInsetBorder"
+---
+
+## Overview
+
+The `addInsetBorder` function adds a stylish inset border to an HTML element. You can customize the border's offset, width, and style, along with an optional class name for additional styling.
+
+### Parameters
+
+- `element`: The target HTML element to which the inset border will be applied.
+- `borderOptions` (**_optional_**): An object for customizing the inset border, including:
+  - `borderOffset`: The distance between the inner and outer borders (default: '15px').
+  - `borderWidth`: The thickness of the border (default: BORDER_SIZE.sm).
+  - `borderStyle`: The style of the border (default: 'solid').
+- `className` (**_optional_**): Custom class name for additional CSS styling.
+
+### Returns
+
+An `HTMLDivElement` that wraps the original element with the inset border applied.
+
+## Demo
+
+### Example 1
+
+```js
+import { addInsetBorder } from "bordex";
+
+const element = document.getElementById("element");
+
+// Adds an inset border to an element.
+addInsetBorder(element, {}, "element");
+```
+
+![example border demo](/border-style-images/inset-border-demo.jpg)
+
+### Example 2
+
+```js
+import { addInsetBorder } from "bordex";
+
+// Assuming you have an HTML element to apply the border to
+const element = document.getElementById("element");
+
+// Adds an inset border to an element with a specified options.
+addInsetBorder(element, { borderStyle: "dotted" }, "element");
+```
+
+![example border demo](/border-style-images/inset-border-demo-options.jpg)

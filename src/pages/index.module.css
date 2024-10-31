@@ -8,6 +8,12 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+  background: rgb(191, 255, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(191, 255, 0, 1) 0%,
+    rgba(150, 0, 150, 1) 100%
+  );
 }
 
 @media screen and (max-width: 996px) {
@@ -20,4 +26,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.quick-start-button {
+  color: white !important;
+  background-color: #960096;
+  border: none;
+}
+
+.header-title {
+  color: white;
+  text-transform: uppercase;
+}
+
+.header-description {
+  color: white;
+}
+
+.tagline {
+  font-weight: bold;
+  text-transform: uppercase;
 }

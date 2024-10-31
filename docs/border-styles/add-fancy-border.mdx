@@ -1,0 +1,50 @@
+---
+title: "addFancyBorder"
+---
+
+## Overview
+
+The `addFancyBorder` function adds a decorative border to an HTML element, allowing customization of border color, width, and style. You can also specify an optional class name for additional styling.
+
+### Parameters
+
+- `element`: The target HTML element.
+- `borderOptions` (**_optional_**):
+  - `borderColor`: The color of the border (default: `COLOR_THEME.primary`).
+  - `borderWidth`: The thickness of the border (default: `BORDER_SIZE.sm`).
+  - `borderStyle`: The style of the border (default: `'solid'`).
+- `className` (**_optional_**): Custom class name for additional CSS.
+
+### Returns
+
+An `HTMLDivElement` that wraps the original element with the fancy border applied.
+
+## Demo
+
+### Example 1
+
+```js
+const element = document.getElementById("element");
+
+addFancyBorder(element, {}, "element");
+```
+
+![example border demo](/border-style-images/fancy-border-demo.jpg)
+
+### Example 2
+
+```js
+import { addFancyBorder } from "bordex";
+
+// Assuming you have an HTML element to apply the border to
+const element = document.getElementById("element");
+
+// Adds a fancy border to an element with a specified options.
+addFancyBorder(
+  element,
+  { borderColor: "#BFFF00", borderStyle: "double", borderWidth: "10px" },
+  "element" // classname for the border element
+);
+```
+
+![examnple border demo](/border-style-images/fancy-border-demo-options.jpg)

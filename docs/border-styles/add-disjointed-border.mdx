@@ -1,0 +1,52 @@
+---
+title: "addDisjointedBorder"
+---
+
+## Overview
+
+The `addDisjointedBorder` function applies a customizable disjointed border to an HTML element. You can set the border's angle and color, along with an optional class name for additional styling.
+
+### Parameters
+
+- `element`: The target HTML element.
+- `borderOptions` (**_optional_**):
+  - `angle`: The angle of the border (e.g., `'90deg'`).
+  - `borderColor`: The color of the border.
+- `className` (**_optional_**): Custom class name for additional CSS.
+
+### Returns
+
+An `HTMLDivElement` that wraps the original element with the disjointed border applied.
+
+## Demo
+
+### Example 1
+
+```js
+import { addDisjointedBorder } from "bordex";
+
+const element = document.getElementById("element");
+
+// Adds a disjointedBorder to an element.
+addDisjointedBorder(element, {}, "element");
+```
+
+![example border demo](/border-style-images/disjointed-border-demo.jpg)
+
+### Example 2
+
+```js
+import { addDisjointedBorder } from "bordex";
+
+// Assuming you have an HTML element to apply the border to
+const element = document.getElementById("element");
+
+// Adds a disjointed border to an element with a specified options.
+addDisjointedBorder(
+  element,
+  { angle: "45deg", borderColor: "#BFFF00" },
+  "element" // classname for the border element
+);
+```
+
+![example border demo](/border-style-images/disjointed-border-demo-options.jpg)

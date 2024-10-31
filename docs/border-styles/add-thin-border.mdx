@@ -1,0 +1,50 @@
+---
+title: "addThinBorder"
+---
+
+## Overview
+
+The `addThinBorder` function applies a thin, customizable border to an HTML element on a specified side or orientation. It allows you to define the color, side placement, and outset spacing, along with an optional class name for further styling.
+
+### Parameters
+
+- `element`: The target HTML element to which the thin border will be applied.
+- `borderOptions` (**_optional_**): An object for configuring the thin border, including:
+  - `color`: The color of the thin border (defaults to a secondary theme color).
+  - `side`: The side(s) where the thin border should be placed (e.g., `'top'`, `'bottom'`, `'left'`, `'right'`, `'horizontal'`, or `'vertical'`).
+  - `outset`: The amount of spacing between the thin border and the element (applies horizontally or vertically depending on the selected side).
+- `className` (**_optional_**): Custom class name for applying additional CSS styles to the border container.
+
+### Returns
+
+An `HTMLDivElement` that wraps the original element with the thin border applied.
+
+## Demo
+
+### Example 1
+
+```js
+import { addThinBorder } from "bordex";
+
+// Assuming you have an HTML element to apply the border to
+const element = document.getElementById("element");
+
+// Adds a thin border to an element.
+addThinBorder(element, {}, "element");
+```
+
+![example border demo](/border-style-images/thin-border-demo.jpg)
+
+### Example 2
+
+```js
+import { addThinBorder } from "bordex";
+
+// Assuming you have an HTML element to apply the border to
+const element = document.getElementById("element");
+
+// Adds a thin border to an element with a specified options.
+addThinBorder(element, { side: "horizontal" }, "element");
+```
+
+![example border demo](/border-style-images/thin-border-demo-options.jpg)

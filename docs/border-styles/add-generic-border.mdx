@@ -1,0 +1,48 @@
+---
+title: "addGenericBorder"
+---
+
+## Overview
+
+The `addGenericBorder` function applies a pre-styled border to an HTML element. You can specify the border style (such as `"solid"`, `"double"`, or `"dotted"`) and customize optional properties like border color and width.
+
+### Parameters
+
+- `element`: The target HTML element to which the border will be added.
+- `borderStyle`: The style of the border (e.g., "solid", "double", "dotted").
+- `borderOptions` (**_optional_**): An object with optional design properties, including:
+  - `borderColor`: The color of the border.
+  - `borderWidth`: The thickness of the border (default values apply if not specified).
+
+### Returns
+
+The updated `HTMLElement` with the applied border.
+
+## Demo
+
+### Example 1
+
+```js
+import { addGenericBorder } from "bordex";
+
+const element = document.getElementById("element");
+
+// Adds a generic border to an element.
+addGenericBorder(element, "groove");
+```
+
+![examlp border demo](/border-style-images/generic-border-demo.jpg)
+
+### Example 2
+
+```js
+import { addGenericBorder } from "bordex";
+
+// Assuming you have an HTML element to apply the border to
+const element = document.getElementById('element');
+
+// Adds a generic border to an element with a specified options.
+addGenericBorder(element, 'groove', { borderColor: '#BFFF00', borderWidth:'15px' }),
+```
+
+![example border demo](/border-style-images/generic-border-demo-options.jpg)

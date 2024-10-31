@@ -1,0 +1,46 @@
+---
+title: "addBlurBorder"
+---
+
+## Overview
+
+The `addBlurBorder` function applies a soft, blur-like border effect to a specified HTML element. You can customize the border's color and width, with default values provided for ease of use.
+
+### Parameters
+
+- `element`: The target HTML element to which the blur border will be applied.
+- `borderOptions` (**_optional_**): An object for customizing the blur border, including:
+  - `borderColor`: The color of the blur border (default is the primary color from the theme).
+  - `borderWidth`: The width of the blur effect (default is 20px).
+
+### Returns
+
+The original `HTMLElement` with the applied blur border effect.
+
+## Demo
+
+### Example 1
+
+```js
+import { addBlurBorder } from "bordex";
+
+// Assuming you have an HTML element to apply the border to
+const element = document.getElementById("element");
+
+addBlurBorder(element);
+```
+
+![example border demo](/border-style-images/blur-border-demo.jpg)
+
+### Example 2
+
+```js
+import { addBlurBorder } from "bordex";
+
+// Assuming you have an HTML element to apply the border to
+const element = document.getElementById("element");
+
+addBlurBorder(element, { borderColor: "#BFFF00" });
+```
+
+![example border demo](/border-style-images/blur-border-demo-options.jpg)

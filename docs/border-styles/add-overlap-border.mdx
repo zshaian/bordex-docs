@@ -1,0 +1,54 @@
+---
+title: "addOverlapBorder"
+---
+
+## Overview
+
+The `addOverlapBorder` function applies a unique overlapping border style to an HTML element. You can customize properties like the border color, width, and style, along with an optional class name for further styling.
+
+### Parameters
+
+- `element`: The HTML element to which the overlap border will be applied.
+- `borderOptions` (**_optional_**): An object for customizing the overlapping border, including:
+  - `borderColor`: Color of the border (default: COLOR_THEME.primary).
+  - `borderWidth`: General border width (default: BORDER*SIZE.sm), with specific options for each side (e.g., borderTopWidth).
+  - `borderStyle`: Style of the border (default: 'solid').
+- className (***optional***): A custom class name to apply CSS styling to the container.
+
+### Returns
+
+An `HTMLDivElement` that wraps the original element with the overlapping border applied.
+
+## Demo
+
+### Example 1
+
+```js
+import { addOverlapBorder } from "bordex";
+
+// Assuming you have an HTML element to apply the border to
+const element = document.getElementById("element");
+
+// Adds an overlap border to an element.
+addOverlapBorder(element, {}, "element");
+```
+
+![example border demo](/border-style-images/overlap-border-demo.jpg)
+
+### Example 2
+
+```js
+import { addOverlapBorder } from "bordex";
+
+// Assuming you have an HTML element to apply the border to
+const element = document.getElementById("element");
+
+// Adds an overlap border to an element with a specified options.
+addOverlapBorder(
+  element,
+  { borderColor: "#BFFF00", borderWidth: "15px", borderStyle: "double" },
+  "element"
+);
+```
+
+![example border demo](/border-style-images/overlap-border-demo-options.jpg)

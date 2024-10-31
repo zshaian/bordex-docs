@@ -1,0 +1,53 @@
+---
+title: "addGradientBorder"
+---
+
+## Overview
+
+The `addGradientBorder` function adds a visually striking gradient border to an HTML element. You can customize the gradient's angle, colors, and border width, along with an optional class name for additional styling.
+
+### Parameters
+
+- `element`: The target HTML element to which the gradient border will be applied.
+- `borderOptions` (**_optional_**): An object for customizing the gradient border, including:
+  - `angle`: The angle of the gradient (e.g., `'20deg'`).
+  - `colors`: An array of color strings for the gradient.
+  - `borderWidth`: The thickness of the border (default values apply if not specified).
+- `className` (**_optional_**): Custom class name for additional CSS styling.
+
+### Returns
+
+An HTMLDivElement that wraps the original element with the gradient border applied.
+
+## Demo
+
+### Example 1
+
+```js
+import { addGradientBorder } from "bordex";
+
+const element = document.getElementById("element");
+
+// Adds a gradient border to an element.
+addGradientBorder(element, {}, "element");
+```
+
+![example border demo](/border-style-images/gradient-border-demo.jpg)
+
+### Example 2
+
+```js
+import { addGradientBorder } from "bordex";
+
+// Assuming you have an HTML element to apply the border to
+const element = document.getElementById("element");
+
+// Adds a gradient border to an element with a specified options.
+addGradientBorder(
+  element,
+  { angle: "90deg", colors: ["red", "orange"] },
+  "element" // classname for the border element
+);
+```
+
+![example border demo](/border-style-images/gradient-border-demo-options.jpg)

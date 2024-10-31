@@ -1,0 +1,54 @@
+---
+title: "addStripeBorder"
+---
+
+## Overview
+
+The `addStripeBorder` applies a customizable striped border to an HTML element, you can adjust adjust stripe width, colors, and border width.
+
+### Parameters
+
+- `element`: The HTML element to which the striped border will be applied.
+- `borderOptions` (**_optional_**): An object to customize the striped border, including:
+  - `stripeWidth`: Width of each stripe (default: inherited or standard width).
+  - `borderWidth`: Width of the overall border.
+  - `colors`: Array of colors for alternating stripes.
+- `className` (**_optional_**): A custom class name to style the container.
+
+### Returns
+
+An `HTMLDivElement` wrapping the original element with the striped border applied.
+
+## Demo
+
+### Example 1
+
+```js
+import { addStripeBorder } from "bordex";
+
+// Assuming you have an HTML element to apply the border to
+const element = document.getElementById("element");
+
+// Adds a stripe border to an element.
+addStripeBorder(element, {}, "element");
+```
+
+![example border demo](/border-style-images/stripe-border-demo.jpg)
+
+### Example 2
+
+```js
+import { addStripeBorder } from "bordex";
+
+// Assuming you have an HTML element to apply the border to
+const element = document.getElementById("element");
+
+// Adds a stripe border to an element with a specified options.
+addStripeBorder(
+  element,
+  { colors: ["red", "orange"], borderWidth: "15px" },
+  "element"
+);
+```
+
+![example border demo](/border-style-images/stripe-border-demo-options.jpg)

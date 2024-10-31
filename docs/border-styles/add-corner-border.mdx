@@ -1,0 +1,54 @@
+---
+title: "addCornerBorder"
+---
+
+## Overview
+
+The `addCornerBorder` function adds a customizable four-corner border to an HTML element. You can adjust the border's width, color, and style, and apply an optional class name for additional styling.
+
+### Parameters
+
+- `element`: The target HTML element.
+- `borderOptions` (**_optional_**):
+  - `borderWidth`: Thickness of the border (default: BORDER_SIZE.sm).
+  - `borderColor`: Color of the border (default: COLOR_THEME.primary).
+  - `borderStyle`: Style of the border (default: 'solid').
+- `className` (**_optional_**): Custom class name for additional CSS.
+
+### Returns
+
+An `HTMLDivElement` that wraps the original element with the corner border applied.
+
+## Demo
+
+### Example 1
+
+```js
+import { addCornerBorder } from "bordex";
+
+// Assuming you have an HTML element to apply the border to
+const element = document.getElementById("element");
+
+// Adds a corner border to an element.
+addCornerBorder(element, {}, "element");
+```
+
+![example border demo](/border-style-images/corner-border-demo.jpg)
+
+### Example 2
+
+```js
+import { addCornerBorder } from "bordex";
+
+// Assuming you have an HTML element to apply the border to
+const element = document.getElementById("element");
+
+// Adds a corner boder to an element with a specified options.
+addCornerBorder(
+  element,
+  { borderColor: "red", borderWidth: "30px", borderStyle: "double" },
+  "element"
+);
+```
+
+![example border demo](/border-style-images/corner-border-demo-options.jpg)
