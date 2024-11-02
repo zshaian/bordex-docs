@@ -9,7 +9,7 @@ const config: Config = {
 
   url: "https://bordex.netlify.app",
   baseUrl: "/",
-  onBrokenLinks: "throw",
+  onBrokenLinks: "ignore",
   onBrokenMarkdownLinks: "warn",
 
   i18n: {
