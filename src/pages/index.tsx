@@ -28,7 +28,7 @@ function HomepageHeader() {
               "button button--secondary button--lg",
               styles["quick-start-button"]
             )}
-            to="/docs/intro"
+            to="/docs/border-styles/intro"
           >
             Quick Start
           </Link>
