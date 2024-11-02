@@ -1,0 +1,311 @@
+---
+title: Bordex API
+
+sidebar_position: 1
+---
+
+import Table from "../../src/components/api-tables";
+
+# Bordex Border Styles API
+
+## `addBlurBorder()`
+
+**Returns:** `HTMLElement` - return the HTMLElement passed as the first argument
+
+**Description**:
+
+Applies a blur border style to the specified element and returns that element.
+
+<Table
+  items={[
+    {
+      propertyName: "element",
+      type: "HTMLElement",
+      description: "The element to add the blur border",
+    },
+    {
+      propertyName: "borderOptions",
+      type: "IBlurBorderOptions",
+      type: {
+        link: "./type-definition/interface/border-styles-interfaces#iblurborderoptions-interface",
+        type: "IBlurBorderOptions",
+      },
+      description: "Optional design properties like borderColor or borderWidth",
+    },
+  ]}
+/>
+
+## `addCornerBorder()`
+
+**Returns:** `HTMLDivElement` - A `div` element that wraps the target element with a blur border applied.
+
+**Description**:
+
+Applies a corner border style to the specified element and returns a new div element that wraps around the original element or the element provided.
+
+<Table
+  items={[
+    {
+      propertyName: "element",
+      type: "HTMLElement",
+      description: "The element to add the corner border",
+    },
+    {
+      propertyName: "borderOptions",
+      type: {
+        link: "./type-definition/interface/border-interfaces#ishorthandborderoptions-interface",
+        type: "IShortHandBorderOptions",
+      },
+      description: "Optional design property like borderColor or borderStyle",
+    },
+    {
+      propertyName: "className",
+      type: "string",
+      description: "Optional class name to add to the border wrapper element",
+    },
+  ]}
+/>
+
+## `addDisjointedBorder()`
+
+**Returns:** `HTMLDivElement` - A `div` element that wraps the target element with a blur border applied.
+
+**Description**:
+
+Applies a disjointed border style to the specified element and returns a new div element that wraps around the original element or the element provided.
+
+<Table
+  items={[
+    {
+      propertyName: "element",
+      type: "HTMLElement",
+      description: "The element to add the disjointed border",
+    },
+    {
+      propertyName: "borderOptions",
+      type: {
+        link: "./type-definition/interface/border-styles-interfaces#idisjointedborderoptions-interface",
+        type: "IDisjointedBorderOptions",
+      },
+      description: "Optional design property like angle or borderColor",
+    },
+    {
+      propertyName: "className",
+      type: "string",
+      description: "Optional class name to add to the border wrapper element",
+    },
+  ]}
+/>
+
+## `addFancyBorder()`
+
+**Returns:** `HTMLDivElement` - A `div` element that wraps the target element with a blur border applied.
+
+**Description**:
+
+Applies a faancy border style to the specified element and returns a new div element that wraps around the original element or the element provided.
+
+<Table
+  items={[
+    {
+      propertyName: "element",
+      type: "HTMLElement",
+      description: "The element to add the fancy border",
+    },
+    {
+      propertyName: "borderOptions",
+      type: {
+        link: "./type-definition/interface/border-interfaces#ishorthandborderoptions-interface",
+        type: "IShortHandBorderOptions",
+      },
+      description: "Optional design property like borderColor or borderWidth",
+    },
+    {
+      propertyName: "className",
+      type: "string",
+      description: "Optional class name to add to the border wrapper element",
+    },
+  ]}
+/>
+
+## `addGenericBorder()`
+
+**Returns:** `HTMLElement` - return the HTMLElement passed as the first argument
+
+**Description**:
+
+Applies a generic border style to the specified element and returns that element.
+
+<Table
+  items={[
+    {
+      propertyName: "element",
+      type: "HTMLElement",
+      description: "The element to add the generic border",
+    },
+    {
+      propertyName: "borderStyle",
+      type: "CommonBorderStyles",
+      type: {
+        link: "./type-definition/type/border-types#commonborderstyles-type",
+        type: "CommonBorderStyles",
+      },
+      description: "Optional design property like borderColor or borderWidth",
+    },
+    {
+      propertyName: "borderOptions",
+      type: "BorderOptionsOptional",
+      description: "Optional design property like borderColor or borderWidth",
+    },
+  ]}
+/>
+
+## `addGradientBorder()`
+
+**Returns:** `HTMLDivElement` - A `div` element that wraps the target element with a gradient border applied.
+
+**Description**:
+
+Applies a gradient border style to the specified element and returns a new div element that wraps around the original element or the element provided.
+
+<Table
+  items={[
+    {
+      propertyName: "element",
+      type: "HTMLElement",
+      description: "The element to add the gradient border",
+    },
+    {
+      propertyName: "borderOptions",
+      type: "IGradientBorderOptions",
+      type: {
+        link: "./type-definition/interface/border-styles-interfaces#igradientborderoptions-interface",
+        type: "IGradientBorderOptions",
+      },
+      description:
+        "Optional design property like angle or colors of the gradient",
+    },
+    {
+      propertyName: "className",
+      type: "string",
+      description: "Optional class name to add to the border wrapper element",
+    },
+  ]}
+/>
+
+## `addInsetBorder()`
+
+**Returns:** `HTMLDivElement` - A `div` element that wraps the target element with an inset border applied.
+
+**Description**:
+
+Applies an inset border style to the specified element and returns a new div element that wraps around the original element or the element provided.
+
+<Table
+  items={[
+    {
+      propertyName: "element",
+      type: "HTMLElement",
+      description: "The element to add the inset border",
+    },
+    {
+      propertyName: "borderOptions",
+      type:{link:'./type-definition/interface/border-styles-interfaces#iinsetborderoptions-interface',type:'IInsetBorderOptions'},
+      description: "Optional design property like borderOffset or borderStyle",
+    },
+    {
+      propertyName: "className",
+      type: "string",
+      description: "Optional class name to add to the border wrapper element",
+    },
+  ]}
+/>
+
+## `addOverlapBorder()`
+
+**Returns:** `HTMLDivElement` - A `div` element that wraps the target element with an overlap border applied.
+
+**Description**:
+
+Applies an overlap border style to the specified element and returns a new div element that wraps around the original element or the element provided.
+
+<Table
+  items={[
+    {
+      propertyName: "element",
+      type: "HTMLElement",
+      description: "The element to add the overlap border",
+    },
+    {
+      propertyName: "borderOptions",
+      type: "FullBorderOptions",
+      type:{link:'./type-definition/type/border-types#fullborderoptions-type',type:'FullBorderOptions'},
+      description: "Optional design property like borderColor or borderStyle",
+    },
+    {
+      propertyName: "className",
+      type: "string",
+      description: "Optional class name to add to the border wrapper element",
+    },
+  ]}
+/>
+
+## `addStripeBorder()`
+
+**Returns:** `HTMLDivElement` - A `div` element that wraps the target element with a stripe border applied.
+
+**Description**:
+
+Applies a stripe border style to the specified element and returns a new div element that wraps around the original element or the element provided.
+
+<Table
+  items={[
+    {
+      propertyName: "element",
+      type: "HTMLElement",
+      description: "The element to add the stripe border",
+    },
+    {
+      propertyName: "borderOptions",
+      type: "IStripeBorderOptions",
+      type:{link:'./type-definition/interface/border-styles-interfaces#istripeborderoptions-interface',type:'IStripeBorderOptions'},
+      description:
+        "Optional design property like stripeWidth or colors of the stripe",
+    },
+    {
+      propertyName: "className",
+      type: "string",
+      description: "Optional class name to add to the border wrapper element",
+    },
+  ]}
+/>
+
+## `addThinBorder()`
+
+**Returns:** `HTMLDivElement` - A `div` element that wraps the target element with a thin border applied.
+
+**Description**:
+
+Applies a thin border style to the specified element and returns a new div element that wraps around the original element or the element provided.
+
+<Table
+  items={[
+    {
+      propertyName: "element",
+      type: "HTMLElement",
+      description: "The element to add the thin border",
+    },
+    {
+      propertyName: "borderOptions",
+      type:{link:'./type-definition/interface/border-styles-interfaces#ithinborder-interface',type:'IThinBorder'},
+      description:
+        "Optional design property like  color of the thin border or the side to apply the thin border",
+    },
+    {
+      propertyName: "className",
+      type: "string",
+      description: "Optional class name to add to the border wrapper element",
+    },
+  ]}
+/>
+{/* A `div` element that wraps the target element with a blur border applied. */}

@@ -56,6 +56,12 @@ const config: Config = {
           label: "Guides",
         },
         {
+          type: "docSidebar",
+          sidebarId: "ApiSidebar",
+          position: "left",
+          label: "API",
+        },
+        {
           href: "https://github.com/Bear-Frost/bordex",
           label: "GitHub",
           position: "right",

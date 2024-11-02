@@ -1,0 +1,203 @@
+---
+title: "Border Interfaces"
+sidebar_position: 1
+---
+
+import Table from "../../../../src/components/api-tables";
+
+## `IBorderColor` Interface
+
+The `IBorderColor` interface defines color properties for each side of a border in a CSS-compatible format. Each property accepts a string representing a valid CSS color value, such as a named color (`"red"`), a hexadecimal color (`"#ff0000"`), or an `rgba` color value (`"rgba(255, 0, 0, 1)"`).
+
+This interface provides flexibility in setting individual colors for the top, right, bottom, and left borders of an element. You can also set a singl
+
+<Table
+  items={[
+    {
+      propertyName: "borderLeftColor",
+      type: "string",
+      description:
+        "Specifies the color of the left border. Must be a valid CSS color value (e.g., 'red', '#ff0000', 'rgba(255, 0, 0, 1)').",
+    },
+    {
+      propertyName: "borderRightColor",
+      type: "string",
+      description:
+        "Specifies the color of the right border. Must be a valid CSS color value (e.g., 'blue', '#0000ff', 'rgba(0, 0, 255, 1)').",
+    },
+    {
+      propertyName: "borderBottomColor",
+      type: "string",
+      description:
+        "Specifies the color of the bottom border. Must be a valid CSS color value (e.g., 'green', '#008000', 'rgba(0, 128, 0, 1)').",
+    },
+    {
+      propertyName: "borderTopColor",
+      type: "string",
+      description:
+        "Specifies the color of the top border. Must be a valid CSS color value (e.g., 'yellow', '#ffff00', 'rgba(255, 255, 0, 1)').",
+    },
+    {
+      propertyName: "borderColor",
+      type: "string",
+      description:
+        "Specifies the color applied to all borders ( top,left,bottom,right ). Must be a valid CSS color value (e.g., 'black', '#000000', 'rgba(0, 0, 0, 1)').",
+    },
+  ]}
+/>
+
+## `IBorderWidth` Interface
+
+The `IBorderWidth` interface defines properties to set the width of each side of a border using valid CSS width values. Each property accepts a string representing any valid CSS width unit, such as pixels (`"1px"`), em units (`"2em"`), or percentages (`"50%"`).
+
+This interface enables you to define individual border widths for each side top, right, bottom, and left. Additionally, you can use the `borderWidth` property to apply the same width to all four borders.
+
+<Table
+  items={[
+    {
+      propertyName: "borderLeftWidth",
+      type: "string",
+      description:
+        "Specifies the width of the left border. Must be a valid CSS width value (e.g., '1px', '2em', '50%').",
+    },
+    {
+      propertyName: "borderRightWidth",
+      type: "string",
+      description:
+        "Specifies the width of the right border. Must be a valid CSS width value (e.g., '1px', '2em', '50%').",
+    },
+    {
+      propertyName: "borderBottomWidth",
+      type: "string",
+      description:
+        "Specifies the width of the bottom border. Must be a valid CSS width value (e.g., '1px', '2em', '50%').",
+    },
+    {
+      propertyName: "borderTopWidth",
+      type: "string",
+      description:
+        "Specifies the width of the top border. Must be a valid CSS width value (e.g., '1px', '2em', '50%').",
+    },
+    {
+      propertyName: "borderWidth",
+      type: "string",
+      description:
+        "Specifies the width applied to all borders ( top,left,bottom,right ). Must be a valid CSS width value (e.g., '1px', '2em', '50%').",
+    },
+  ]}
+/>
+
+## `IBorderStyle` Interface
+
+The `IBorderStyle` interface defines properties to set the style of each side of a border using predefined border styles. Each property accepts a value from the [CommonBorderStyles](../type/border-types#commonborderstyles-type) type, which includes options like `'solid'`, `'dashed'`, and `'dotted'`.
+
+This interface allows you to specify individual border styles for each side top, right, bottom, and left. Additionally, you can use the `borderStyle` property to apply the same style to all four borders.
+
+<Table
+  items={[
+    {
+      propertyName: "borderLeftStyle",
+      type: {
+        link: "../type/border-types#commonborderstyles-type",
+        type: "CommonBorderStyles",
+      },
+      description:
+        "Specifies the style of the left border. Must be one of the common border styles (e.g., 'solid', 'dashed', 'dotted').",
+    },
+    {
+      propertyName: "borderRightStyle",
+      type: {
+        link: "../type/border-types#commonborderstyles-type",
+        type: "CommonBorderStyles",
+      },
+      description:
+        "Specifies the style of the right border. Must be one of the common border styles (e.g., 'solid', 'dashed', 'dotted').",
+    },
+    {
+      propertyName: "borderBottomStyle",
+      type: {
+        link: "../type/border-types#commonborderstyles-type",
+        type: "CommonBorderStyles",
+      },
+      description:
+        "Specifies the style of the bottom border. Must be one of the common border styles (e.g., 'solid', 'dashed', 'dotted').",
+    },
+    {
+      propertyName: "borderTopStyle",
+      type: {
+        link: "../type/border-types#commonborderstyles-type",
+        type: "CommonBorderStyles",
+      },
+      description:
+        "Specifies the style of the top border. Must be one of the common border styles (e.g., 'solid', 'dashed', 'dotted').",
+    },
+    {
+      propertyName: "borderStyle",
+      type: {
+        link: "../type/border-types#commonborderstyles-type",
+        type: "CommonBorderStyles",
+      },
+      description:
+        "Specifies the style applied to all borders (top, left, bottom, right). Must be one of the common border styles (e.g., 'solid', 'dashed', 'dotted').",
+    },
+  ]}
+/>
+
+## `IShortHandBorderOptions` Interface
+
+The `IBorderOptions` interface defines the attributes for configuring borders in a consistent manner. It includes properties for border width, color, and style, which can be applied to all sides of an element.
+
+<Table
+  items={[
+    {
+      propertyName: "borderWidth",
+      type: "string",
+      description:
+        "Specifies the width to all borders ( top,left,bottom,right ). Must be a valid CSS width value (e.g., '1px', '2em', '50%'). Optional.",
+    },
+    {
+      propertyName: "borderColor",
+      type: "string",
+      description:
+        "Specifies the color applied to all borders ( top,left,bottom,right ). Must be a valid CSS color value (e.g., 'black', '#000000', 'rgba(0, 0, 0, 1)').",
+    },
+    {
+      propertyName: "borderStyle",
+      type: {
+        link: "../type/border-types#commonborderstyles-type",
+        type: "CommonBorderStyles",
+      },
+      description:
+        "Specifies the style of the border ( top,left,bottom,right ). Must be one of the common border styles (e.g., 'solid', 'dashed', 'dotted'). Optional.",
+    },
+  ]}
+/>
+
+## `IshorthandBorder` Interface
+
+The `IBorderOptions` interface defines the attributes for configuring borders in a consistent manner. It includes properties for all of the border options.
+
+<Table
+  items={[
+    {
+      propertyName: "borderLeft",
+      type: "string",
+      description: "Specifies the border size, border style, border color, of the left side border this it should follow this format ( 5px solid green )",
+    },
+    {
+      propertyName: "borderRight",
+      type: "string",
+      description: "Specifies the border size, border style, border color, of the right side border this it should follow this format ( 5px solid green )",
+    },
+    {
+      propertyName: "borderTop",
+      type: "string",
+      description: "Specifies the border size, border style, border color, of the top side border this it should follow this format ( 5px solid green )",
+    },
+    {
+      propertyName: "borderBottom",
+      type: "string",
+      description: "Specifies the border size, border style, border color, of the bottom side border this it should follow this format ( 5px solid green )",
+    },
+  ]}
+/>

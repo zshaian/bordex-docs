@@ -1,0 +1,150 @@
+---
+title: Border Style Interfaces
+---
+
+import Table from "../../../../src/components/api-tables";
+
+## `IBlurBorderOptions` Interface
+
+The `IBlurBorderOptions` interface defines the properties for configuring a blurred border effect. It includes attributes for specifying the border color and border width, just make sure that valid CSS values are used.
+
+<Table
+  items={[
+    {
+      propertyName: "borderColor",
+      type: "string",
+      description:
+        "Specifies the color of the border. Must be a valid CSS color value (e.g., 'red', '#ff0000', 'rgba(255, 0, 0, 1)').",
+    },
+    {
+      propertyName: "borderWidth",
+      type: "string",
+      description:
+        "Specifies the width of the border. Must be a valid CSS width value (e.g., '1px', '2em', '50%').",
+    },
+  ]}
+/>
+
+## `IDisjointedBorderOptions` Interface
+
+The `IDisjointedBorderOptions` interface defines the properties for creating a disjointed border effect. It includes options for specifying the angle and color of the border, just make sure that valid CSS values are used.
+
+<Table
+  items={[
+    {
+      propertyName: "angle",
+      type: "string",
+      description:
+        "Specifies the angle of the disjointed border. Must be a valid CSS angle value (e.g., '45deg', '90rad', '1turn'). Optional.",
+    },
+    {
+      propertyName: "borderColor",
+      type: "string",
+      description:
+        "Specifies the color of the disjointed border. Must be a valid CSS color value (e.g., 'red', '#ff0000', 'rgba(255, 0, 0, 1)'). Optional.",
+    },
+  ]}
+/>
+
+## `IGradientBorderOptions` Interface
+
+**Extends**: [BorderWidthOptional](../type/border-types/#borderwidthoptional-type)
+
+The `IGradientBorderOptions` interface defines the properties for creating a gradient border effect. It includes options for specifying the angle and an array of colors that will form the gradient.
+
+<Table
+  items={[
+    {
+      propertyName: "angle",
+      type: "string",
+      description:
+        "Specifies the angle of the gradient border. Must be a valid CSS angle value (e.g., '45deg', '90rad', '1turn'). Optional.",
+    },
+    {
+      propertyName: "colors",
+      type: "string[]",
+      description:
+        "An array of color values for the gradient. Each color must be a valid CSS color value (e.g., 'red', '#ff0000', 'rgba(255, 0, 0, 1)') or you can also add a stop to the color after it's name ( eg., 'red 50%', orange 50%' ). Optional.",
+    },
+  ]}
+/>
+
+## `IInsetBorderOptions` Interface
+
+**Extends**: [BorderWidthOptional](../type/border-types/#borderwidthoptional-type)
+
+The `IInsetBorderOptions` interface defines properties for configuring inset borders. It includes options for specifying the border offset and style.
+
+<Table
+  items={[
+    {
+      propertyName: "borderOffset",
+      type: "string",
+      description:
+        "Specifies the offset of the inset border. Must be a valid CSS unit value (e.g., '10px', '2em', '5%'). Optional.",
+    },
+    {
+      propertyName: "borderStyle",
+      type: {
+        link: "../type/border-types#commonborderstyles-type",
+        type: "CommonBorderStyles",
+      },
+      description:
+        "Specifies the style of the border. Must be one of the predefined common border styles (e.g., 'solid', 'dashed', 'dotted'). Optional.",
+    },
+  ]}
+/>
+
+## `IStripeBorderOptions` Interface
+
+**Extends**: [BorderWidthOptional](../type/border-types/#borderwidthoptional-type)
+
+The `IStripeBorderOptions` interface defines properties for configuring striped borders. It includes options for specifying the width of each stripe and the colors used in the border.
+
+<Table
+  items={[
+    {
+      propertyName: "stripeWidth",
+      type: "string",
+      description:
+        "Specifies the width of each stripe in the border. Must be a valid CSS unit value (e.g., '5px', '2em', '10%'). Optional.",
+    },
+    {
+      propertyName: "colors",
+      type: "string[]",
+      description:
+        "An array of color values for the stripes. Each color must be a valid CSS color value (e.g., 'red', '#ff0000', 'rgba(255, 0, 0, 1)'). Optional.",
+    },
+  ]}
+/>
+
+## `IThinBorder` Interface
+
+The `IThinBorder` interface defines properties for configuring a thin border. It includes options for specifying the border color, the side on which the border is applied, and its outset.
+
+<Table
+  items={[
+    {
+      propertyName: "color",
+      type: "string",
+      description:
+        "Specifies the color of the thin border. Must be a valid CSS color value (e.g., 'blue', '#0000FF', 'rgba(0, 0, 255, 1)'). Optional.",
+    },
+    {
+      propertyName: "side",
+      type: "ThinBorderSides",
+      type: {
+        link: "../type/border-types#thinbordersides-type",
+        type: "ThinBorderSides",
+      },
+      description:
+        "Specifies which side the thin border should be applied to. Can be one of the following: 'top', 'right', 'bottom', 'left', 'horizontal', or 'vertical'. Optional.",
+    },
+    {
+      propertyName: "outset",
+      type: "string",
+      description:
+        "Specifies the outset or offset of the thin border. Must be a valid CSS unit value (e.g., '1px', '2em', '3%'). Optional.",
+    },
+  ]}
+/>

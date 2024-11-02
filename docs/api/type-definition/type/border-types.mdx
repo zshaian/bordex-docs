@@ -1,0 +1,79 @@
+---
+title: "Border Types"
+---
+
+## `CommonBorderStyles` Type
+
+The `CommonBorderStyles` type defines the various styles that can be applied to borders. It includes all of the valid CSS `border-style` value.
+
+```ts
+type CommonBorderStyles =
+  | "solid"
+  | "double"
+  | "dotted"
+  | "dashed"
+  | "outset"
+  | "inset"
+  | "groove"
+  | "ridge";
+```
+
+## `BorderColorOptional` Type
+
+An optional value of the [IBorderColor](../interface/border-interfaces#ibordercolor-interface) interface.
+
+```ts
+type BorderColorOptional = Partial<IBorderColor>;
+```
+
+## `BorderWidthOptional` Type
+
+An optional value of the [IBorderWidth](../interface/border-interfaces#iborderwidth-interface) interface.
+
+```ts
+type BorderWidthOptional = Partial<IBorderWidth>;
+```
+
+## `BorderStyleOptional` Type
+
+An optional value of the [IBorderColor](../interface/border-interfaces#ibordercolor-interface)
+
+```ts
+type BorderStyleOptional = Partial<IBorderStyle>;
+```
+
+## `BorderOptions` Type
+
+An intersection value of [IBorderWidth](../interface/border-interfaces#iborderwidth-interface), [IBorderColor](../interface/border-interfaces#ibordercolor-interface), [IBorderStyle](../interface/border-interfaces#iborderstyle-interface)
+
+```ts
+type BorderOptions = IBorderWidth & IBorderColor & IBorderStyle;
+```
+
+## `BorderOptionsOptional` Type
+
+An Optional value of the [BorderOptions](./border-types#borderoptions-type)
+
+```ts
+type BorderOptions = Partial<BorderOptions>;
+```
+
+## `FullBorderOptions` Type
+A type alias for [BorderOptionsOptional](./border-types#borderoptionsoptional-type)
+```ts
+type FullBorderOptions = BorderOptionsOptional;
+```
+
+## `ThinBorderSides` Type
+
+Specifies the sides to which a thin border can be applied.
+
+```ts
+type ThinBorderSides =
+  | "top"
+  | "right"
+  | "bottom"
+  | "left"
+  | "horizontal"
+  | "vertical";
+```
