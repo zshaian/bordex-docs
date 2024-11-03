@@ -1,41 +1,59 @@
-# Website
+<div align="center">
+  <img src="https://i.imgur.com/BP3gURu.png" alt="bordex icon">
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+  <h1>Bordex</h1>
 
-### Installation
+This is repository contains the documentation for the JavaScript library [Bordex](https://github.com/Bear-Frost/bordex), which helps create pre-styled borders for HTML elements.
+</div>
 
-```
-$ yarn
-```
+## Installation
 
-### Local Development
+clone the documentation repository using the following command.
 
-```
-$ yarn start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-### Build
-
-```
-$ yarn build
+```bash
+git clone https://github.com/Bear-Frost/bordex-docs.git
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+Once cloned, create your own branch and start making changes.
 
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
+```bash
+git checkout -b your-branch-name
 ```
 
-Not using SSH:
+Make the necessary updates or additions to the documentation. When you're ready push your changes and create a pull request.
+
+```bash
+git add .
+git commit -m "chore: description of your changes"
+git push origin your-branch-name
+```
+
+## Project Structure
+
+```txt
+bordex-docs/
+│
+├── docs/                # Documentation markdown files
+├── static/              # Static assets like images
+├── src/                 # Source files for custom Docusaurus components
+├── docusaurus.config.js # Main configuration file
+└── README.md            # This file
 
 ```
-$ GIT_USER=<Your GitHub username> yarn deploy
+
+## Running Locally
+
+To run the documentation site locally, use the following commands:
+
+```bash
+npm install 
+npm run start
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+This will start a local development server and open the documentation in your default web browser.
+
+## Useful Resources
+- [Docusaurus Documentation](https://docusaurus.io/docs)
+
+## License
+This project is licensed under the [MIT](/LICENSE) License.
