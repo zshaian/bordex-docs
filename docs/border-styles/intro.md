@@ -13,6 +13,10 @@ Bordex is a simple, fun library for adding creative borders to HTML elements wit
 ```bash
 npm install bordex
 ```
+or you can use the CDN link. 
+```js
+import { addGradientBorder } from "https://unpkg.com/bordex@latest/dist/index.js";
+```
 
 ### Import and Use
 
